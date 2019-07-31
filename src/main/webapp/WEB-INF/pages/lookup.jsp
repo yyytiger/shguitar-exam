@@ -24,34 +24,34 @@
 </head>
 
 <body>
-<table width="500" border="0" cellpadding="5" cellspacing="5" align="center" style="line-height:30px">
-    <tr>
-        <td height="50" colspan="2">&nbsp;</td>
-    </tr>
-    <tr>
-        <td colspan="2"><div align="left"><font size="+2">2019年吉他考级乐理辅导查询</font></div></td>
-    </tr>
-    <tr>
-        <td width="200"></td>
-        <td> </td>
-    </tr>
-    <tr>
-        <td>
-            <form method="post" action="lookup">
-                <p>姓名 *<br>
-                    <input type="text" name="studentName">
-                </p>
-                <p>联系电话 *<br>
-                    <input type="text" name="mobile">
-                </p>
-                <p>&nbsp; </p>
-                <p>
-                    <input type="submit" name="Submit" value="提交" class="button">
-                </p>
-            </form>
-        </td>
-        <td valign="top"><img src="images/icon.jpg" width="130" height="130"></td>
-    </tr>
-</table>
+    <table width="350" border="0" cellpadding="5" cellspacing="5" align="center" style="line-height:30px">
+        <tr>
+            <td height="50" colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2"><div align="left"><font size="+2">2019年吉他考级乐理辅导查询</font></div></td>
+        </tr>
+        <tr>
+            <td width="200"></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
+                <form method="post" action="lookup">
+                    <p>姓名 *<br>
+                        <input type="text" name="studentName">
+                    </p>
+                    <p>联系电话 *<br>
+                        <input type="text" name="mobile">
+                    </p>
+                    <p>&nbsp; </p>
+                    <p>
+                        <input type="submit" name="Submit" value="提交" class="button">
+                    </p>
+                </form>
+            </td>
+            <td valign="top"><img src="images/icon.jpg" width="130" height="130"></td>
+        </tr>
+    </table>
 </body>
 </html>

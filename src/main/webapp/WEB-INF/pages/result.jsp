@@ -19,18 +19,18 @@
             <td><div align="center"><font size="+3"><strong>学员证</strong></font></div></td>
         </tr>
         <tr>
-            <td align="center"><div style="border:1px silver solid; width:180; height:220; text-align:center; display:table-cell; vertical-align:middle">
+            <td align="center"><div style="border:1px silver solid; width:180px; height: 220px; text-align:center; display:table-cell; vertical-align:middle">
                 贴照片处
             </div></td>
         </tr>
         <tr>
-            <td><div align="center">姓名：</div><div>${student.name}</div></td>
+            <td><div align="center">姓名： ${student.name}</div></td>
         </tr>
         <tr>
-            <td><p align="center">专业：</p><div>${student.majority}</div></td>
+            <td><p align="center">专业： ${student.majority}</div></td>
         </tr>
         <tr>
-            <td><div align="center">等级：</div><div>${student.level}</div></td>
+            <td><div align="center">等级： ${student.level}</div></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
