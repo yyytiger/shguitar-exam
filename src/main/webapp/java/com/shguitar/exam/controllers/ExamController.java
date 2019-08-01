@@ -1,7 +1,9 @@
 package com.shguitar.exam.controllers;
 
 import com.shguitar.exam.models.Student;
-import com.shguitar.exam.models.User;
+import com.shguitar.exam.repositories.StudentRepository;
+import com.shguitar.exam.viewModels.LookupViewModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,23 +13,38 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ExamController {
 
+    @Autowired
+    private StudentRepository studentRepository;
+
     @RequestMapping("/lookup")
-    public String index(Model model){
-        return "lookup";
+    public ModelAndView lookup(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("lookup");
+        return modelAndView;
     }
 
     @RequestMapping("/result")
-    public ModelAndView index(){
+    public ModelAndView result(){
         return new ModelAndView("result");
     }
 
     @RequestMapping(value = "/lookup", method = RequestMethod.POST)
-    public ModelAndView submit(String studentName, String mobile){
-        Student student = new Student();
-        student.setName(studentName);
-        student.setMobile(mobile);
-        student.setLevel("十级");
-        student.setMajority("钢琴");
-        return new ModelAndView("result", "student", student);
+    public ModelAndView submit(String studentName, String mobile) {
+        if (studentName != null || mobile != null) {
+            Student student = studentRepository.getStudent(studentName.trim(), mobile.trim());
+            if (student != null) {
+                return new ModelAndView("result", "student", student);
+            }
+        }
+
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("lookup");
+        modelAndView.getModel().put("NotFoundMessage", "信息不正确！");
+        return modelAndView;
+
+//        LookupViewModel viewModel = new LookupViewModel();
+//        viewModel.setNotFoundMessage("信息不正确！");
+//        return new ModelAndView("lookup", "vm", viewModel);
     }
 }

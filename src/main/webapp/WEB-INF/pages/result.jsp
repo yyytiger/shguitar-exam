@@ -39,7 +39,7 @@
             <td><div align="center">上课地址：海防路429弄100号二号楼二楼202室</div></td>
         </tr>
         <tr>
-            <td><div align="center">上课时间：</div></td>
+            <td><div align="center">上课时间： ${student.classTime}</div></td>
         </tr>
     </table>
 

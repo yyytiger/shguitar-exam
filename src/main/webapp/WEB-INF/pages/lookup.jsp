@@ -1,3 +1,4 @@
+<%@ page import="sun.misc.VM" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@taglib prefix="sf"  uri="http://www.springframework.org/tags/form"%>
@@ -48,6 +49,11 @@
                     <p>
                         <input type="submit" name="Submit" value="提交" class="button">
                     </p>
+                    <!--
+                    <p style="color: red">
+                        ${NotFoundMessage}
+                    </p>
+                    -->
                 </form>
             </td>
             <td valign="top"><img src="images/icon.jpg" width="130" height="130"></td>
