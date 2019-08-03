@@ -41,6 +41,7 @@ public class ExamController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("lookup");
         modelAndView.getModel().put("NotFoundMessage", "信息不正确！");
+        modelAndView.getModel().put("aaa", "123！");
         return modelAndView;
 
 //        LookupViewModel viewModel = new LookupViewModel();

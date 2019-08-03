@@ -1,5 +1,4 @@
-<%@ page import="sun.misc.VM" %>
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" isELIgnored="false" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <%@taglib prefix="sf"  uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -45,15 +44,12 @@
                     <p>联系电话 *<br>
                         <input type="text" name="mobile">
                     </p>
-                    <p>&nbsp; </p>
-                    <p>
-                        <input type="submit" name="Submit" value="提交" class="button">
-                    </p>
-                    <!--
                     <p style="color: red">
                         ${NotFoundMessage}
                     </p>
-                    -->
+                    <p>
+                        <input type="submit" name="Submit" value="提交" class="button">
+                    </p>
                 </form>
             </td>
             <td valign="top"><img src="images/icon.jpg" width="130" height="130"></td>
