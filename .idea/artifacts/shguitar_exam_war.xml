@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="shguitar-exam:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="exam.war">
-      <element id="artifact" artifact-name="shguitar-exam:war exploded" />
-    </root>
-  </artifact>
-</component>
